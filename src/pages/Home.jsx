@@ -14,7 +14,6 @@ const Home = ({ searchValue, setSearchValue }) => {
   const [currentPage, setCurrentPage] = React.useState(1);
 
   const pizzas = items.map((obj) => <PizzaBlock key={obj.id} {...obj} />);
-
   const skeletons = [...new Array(6)].map((_, index) => <Skeleton key={index} />);
 
   React.useEffect(() => {
