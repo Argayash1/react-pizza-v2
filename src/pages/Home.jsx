@@ -39,7 +39,7 @@ const Home = ({ searchValue, setSearchValue }) => {
     <div className='container'>
       <div className='content__top'>
         <Categories value={categoryId} onChangeCategory={(index) => setCategoryId(index)} />
-        <Sort value={sortType} onChangeSort={(index) => setSortType(index)} />
+        <Sort value={sortType} onChangeSort={(obj) => setSortType(obj)} />
       </div>
       <h2 className='content__title'>Все пиццы</h2>
       <div className='content__items'>{isLoading ? skeletons : pizzas}</div>
