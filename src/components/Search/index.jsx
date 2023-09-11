@@ -16,11 +16,19 @@ const Search = () => {
     inputRef.current.focus();
   };
 
+  const debouncedSearch = React.useMemo(
+    () =>
+      debounce((str) => {
+        setSearchValue(str);
+      }, 150),
+    [setSearchValue],
+  );
+
   const updateSearchValue = React.useCallback(
-    debounce((str) => {
-      setSearchValue(str);
-    }, 150),
-    [],
+    (str) => {
+      debouncedSearch(str);
+    },
+    [debouncedSearch],
   );
 
   const onChangeInput = (e) => {
