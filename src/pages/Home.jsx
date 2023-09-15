@@ -68,7 +68,7 @@ const Home = () => {
     isMounted.current = true;
   }, [categoryId, sort.sortProperty, currentPage, navigate]);
 
-  // Если был первый рендер, то проверяем URL-параметры и сохраняем в редаксе
+  // Если был первый рендер, то проверяем URl-параметры и сохраняем в редуксе
   React.useEffect(() => {
     if (window.location.search) {
       const params = qs.parse(window.location.search.substring(1));
