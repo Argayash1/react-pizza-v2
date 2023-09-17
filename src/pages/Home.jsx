@@ -71,6 +71,7 @@ const Home = () => {
   // Если был первый рендер, то проверяем URl-параметры и сохраняем в редуксе
   React.useEffect(() => {
     if (window.location.search) {
+      console.log('Хук 2 отработал');
       const params = qs.parse(window.location.search.substring(1));
 
       const sort = sortList.find((obj) => obj.sortProperty === params.sortProperty);
@@ -89,12 +90,14 @@ const Home = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
 
+    console.log(`Хук 3 отработал, значение isSearch.current=${isSearch.current}`);
+
     if (!isSearch.current) {
       fetchPizzas();
     }
 
     isSearch.current = false;
-  }, [categoryId, sort.sortProperty, searchValue, currentPage, fetchPizzas]);
+  }, [categoryId, sort, searchValue, currentPage, fetchPizzas]);
 
   const pizzas = items.map((obj) => <PizzaBlock key={obj.id} {...obj} />);
   const skeletons = [...new Array(6)].map((_, index) => <Skeleton key={index} />);
