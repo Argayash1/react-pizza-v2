@@ -68,10 +68,9 @@ const Home = () => {
     isMounted.current = true;
   }, [categoryId, sort.sortProperty, currentPage, navigate]);
 
-  // Если был первый рендер, то проверяем URl-параметры и сохраняем в редуксе
+  // Если был первый рендер, то проверяем URL-параметры и сохраняем в редуксе
   React.useEffect(() => {
     if (window.location.search) {
-      console.log('Хук 2 отработал');
       const params = qs.parse(window.location.search.substring(1));
 
       const sort = sortList.find((obj) => obj.sortProperty === params.sortProperty);
@@ -89,8 +88,6 @@ const Home = () => {
   // Если был первый рендер, то запрашиваем пиццы
   React.useEffect(() => {
     window.scrollTo(0, 0);
-
-    console.log(`Хук 3 отработал, значение isSearch.current=${isSearch.current}`);
 
     if (!isSearch.current) {
       fetchPizzas();

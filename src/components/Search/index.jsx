@@ -16,18 +16,6 @@ const Search = () => {
     inputRef.current.focus();
   };
 
-  // хук useMemo в данном случае возвращает функцию debounce (проверил в консоли), т. к. он мемоизирует
-  // результат переданной ему на вход анонимной стрелочной функция, которая выполняет лишь одно действие
-  // - возвращает функцию debounce. Если мемоизировать функцию debounce с помощью хука useCallback, то
-  // возникает предупреждение линтера, что ему на вход передана функция, зависимости которой не известны
-  // const updateSearchValue = React.useMemo(
-  //   () =>
-  //     debounce((str) => {
-  //       setSearchValue(str);
-  //     }, 1000),
-  //   [setSearchValue],
-  // );
-
   const updateSearchValue = React.useRef(
     debounce((str) => {
       setSearchValue(str);
