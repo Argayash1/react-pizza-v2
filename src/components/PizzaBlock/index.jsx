@@ -23,6 +23,7 @@ function PizzaBlock({ id, title, price, imageUrl, sizes, types }) {
       imageUrl,
       // для того, чтобы тип теста выводился в виде строчки, а не числа
       type: typeNames[activeType],
+      // для того, чтобы выводился точный размер
       size: sizes[activeSize],
     };
     dispatch(addItem(item));
