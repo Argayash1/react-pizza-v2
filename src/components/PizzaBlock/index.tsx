@@ -1,8 +1,10 @@
 import { useState } from 'react';
 
+import { Link } from 'react-router-dom';
+
 import { useSelector, useDispatch } from 'react-redux';
 
-import { addItem, selectCartItemById } from '../../redux/slices/cartSlice';
+import { CartItem, addItem, selectCartItemById } from '../../redux/slices/cartSlice';
 
 const typeNames = ['тонкое', 'традиционное'];
 
@@ -25,7 +27,7 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({ id, title, price, imageUrl, siz
   const [activeSize, setActiveSize] = useState(0);
 
   const onClickAdd = () => {
-    const item = {
+    const item: CartItem = {
       id,
       title,
       price,
@@ -34,6 +36,7 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({ id, title, price, imageUrl, siz
       type: typeNames[activeType],
       // для того, чтобы выводился точный размер
       size: sizes[activeSize],
+      count: 0,
     };
     dispatch(addItem(item));
   };
@@ -41,8 +44,10 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({ id, title, price, imageUrl, siz
   return (
     <div className='pizza-block-wrapper'>
       <div className='pizza-block'>
-        <img className='pizza-block__image' src={imageUrl} alt='Pizza' />
-        <h4 className='pizza-block__title'>{title}</h4>
+        <Link to={`/pizza/${id}`}>
+          <img className='pizza-block__image' src={imageUrl} alt='Pizza' />
+          <h4 className='pizza-block__title'>{title}</h4>
+        </Link>
         <div className='pizza-block__selector'>
           <ul>
             {types.map((typeId) => (
