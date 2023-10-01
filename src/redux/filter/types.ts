@@ -5,6 +5,7 @@ export enum SortPropertyEnum {
   TITLE_ASC = '-title',
   PRICE_DESC = 'price',
   PRICE_ASC = '-price',
+  FIRST_RENDER = '',
 }
 
 export type Sort = {
