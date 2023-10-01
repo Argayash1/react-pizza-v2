@@ -3,11 +3,8 @@ import qs from 'qs';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import Categories from '../components/Categories';
-import SortPopup, { sortList } from '../components/Sort';
-import PizzaBlock from '../components/PizzaBlock';
-import Skeleton from '../components/PizzaBlock/Skeleton';
-import Pagination from '../components/Pagination';
+import { Categories, Sort, PizzaBlock, Skeleton, Pagination } from '../components';
+import { sortList } from '../components/Sort';
 
 import { setCategoryId, setCurrentPage, setFilters } from '../redux/filter/slice';
 import { fetchPizzas } from '../redux/pizza/asyncActions';
@@ -102,7 +99,7 @@ const Home: React.FC = () => {
     <div className='container'>
       <div className='content__top'>
         <Categories value={categoryId} onChangeCategory={onChangeCategory} />
-        <SortPopup value={sort} />
+        <Sort value={sort} />
       </div>
       <h2 className='content__title'>Все пиццы</h2>
       {status === 'error' ? (
