@@ -18,6 +18,7 @@
       color: $orange;
       border-bottom: 1px dashed $orange;
       cursor: pointer;
+      white-space: nowrap;
     }
   }
 
@@ -30,6 +31,7 @@
     border-radius: 10px;
     overflow: hidden;
     padding: 10px 0;
+    white-space: nowrap;
 
     ul {
       overflow: hidden;
