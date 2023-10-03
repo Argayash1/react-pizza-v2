@@ -1,8 +1,10 @@
 import './scss/app.scss';
-import Home from './pages/Home';
-import { Routes, Route } from 'react-router-dom';
-import MainLayout from './layouts/MainLayout';
+
 import React, { Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+import MainLayout from './layouts/MainLayout';
+import Home from './pages/Home';
 
 const Cart = React.lazy(() => import(/*webpackChunkName: 'Cart'*/ './pages/Cart'));
 const FullPizza = React.lazy(() => import(/*webpackChunkName: 'FullPizza'*/ './pages/FullPizza'));
