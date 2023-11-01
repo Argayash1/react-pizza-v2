@@ -9,12 +9,9 @@
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: 645px) {
+    @media screen and (max-width: 816px) {
       flex-direction: column;
-
-      .header__cart {
-        margin-top: 20px;
-      }
+      gap: 20px;
     }
   }
 

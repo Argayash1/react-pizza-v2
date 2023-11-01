@@ -1,18 +1,24 @@
 .root {
   position: relative;
-  left: -60px;
 }
 
 .input {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 12px 20px;
-  padding-left: 42px;
+  padding: 12px 42px;
   width: 400px;
   border-radius: 10px;
   font-size: 16px;
 
   &:focus {
     border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  @media screen and (max-width: 1078px) {
+    max-width: 300px;
+  }
+
+  @media screen and (max-width: 346px) {
+    max-width: 270px;
   }
 }
 
