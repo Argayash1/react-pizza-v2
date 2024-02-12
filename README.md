@@ -45,8 +45,8 @@
 
 ## Инструкция по использованию проекта
 
-- `git clone https://github.com/Argayash1/composers-irk-frontend.git` - клонирование репозитория с кодом проекта
-- `cd composers-irk-frontend` - перейти в папку с проектом
+- `git clone https://github.com/Argayash1/react-pizza-v2.git` - клонирование репозитория с кодом проекта
+- `cd react-pizza-v2` - перейти в папку с проектом
 - `npm install` - установка зависимостей проекта
 - `npm start` - сборка проекта в режиме разработки
 - `npm run build` - сборка проекта в продакшн-режиме
