@@ -406,5 +406,39 @@ body {
       font-weight: 600;
       font-size: 18px;
     }
+
+    @media screen and (max-width: 750px) {
+      p {
+        max-width: 512px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    @media screen and (max-width: 720px) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 541px) {
+      p {
+        max-width: 344px;
+      }
+    }
+
+    @media screen and (max-width: 373px) {
+      h2 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+        max-width: 275px;
+      }
+
+      img {
+        width: 270px;
+        height: 229.5px;
+      }
+    }
   }
 }
