@@ -200,6 +200,10 @@ body {
         width: 80px;
         height: 80px;
       }
+
+      @media screen and (max-width: 1011px) {
+        width: auto;
+      }
     }
 
     &-info {
@@ -218,6 +222,11 @@ body {
       p {
         font-size: 18px;
         color: #8d8d8d;
+      }
+
+      @media screen and (max-width: 1011px) {
+        width: auto;
+        margin-right: 24px;
       }
     }
 
@@ -258,6 +267,10 @@ body {
       b {
         font-size: 22px;
       }
+
+      @media screen and (max-width: 1011px) {
+        width: 104.64px;
+      }
     }
 
     &-price {
@@ -270,6 +283,12 @@ body {
         font-weight: bold;
         font-size: 22px;
         letter-spacing: 0.01em;
+      }
+
+      @media screen and (max-width: 1011px) {
+        max-width: 162.22px;
+        margin-left: auto;
+        justify-content: start;
       }
     }
 
