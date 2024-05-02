@@ -204,6 +204,10 @@ body {
       @media screen and (max-width: 1011px) {
         width: auto;
       }
+
+      @media screen and (max-width: 645px) {
+        margin-right: 10px;
+      }
     }
 
     &-info {
@@ -217,16 +221,28 @@ body {
         font-size: 22px;
         line-height: 27px;
         letter-spacing: 0.01em;
+
+        @media screen and (max-width: 908px) {
+          font-size: 18px;
+        }
       }
 
       p {
         font-size: 18px;
         color: #8d8d8d;
+
+        @media screen and (max-width: 908px) {
+          font-size: 14px;
+        }
       }
 
       @media screen and (max-width: 1011px) {
         width: auto;
         margin-right: 24px;
+      }
+
+      @media screen and (max-width: 645px) {
+        margin-right: 10px;
       }
     }
 
@@ -266,10 +282,18 @@ body {
 
       b {
         font-size: 22px;
+
+        @media screen and (max-width: 908px) {
+          font-size: 18px;
+        }
       }
 
       @media screen and (max-width: 1011px) {
         width: 104.64px;
+      }
+
+      @media screen and (max-width: 805px) {
+        min-width: 94.14px;
       }
     }
 
@@ -283,12 +307,26 @@ body {
         font-weight: bold;
         font-size: 22px;
         letter-spacing: 0.01em;
+
+        @media screen and (max-width: 908px) {
+          font-size: 18px;
+        }
       }
 
       @media screen and (max-width: 1011px) {
         max-width: 162.22px;
         margin-left: auto;
         justify-content: start;
+      }
+
+      @media screen and (max-width: 846px) {
+        margin-left: 15px;
+      }
+
+      @media screen and (max-width: 645px) {
+        max-width: fit-content;
+        margin-right: 10px;
+        margin-left: 10px;
       }
     }
 
@@ -322,6 +360,10 @@ body {
           background-color: darken($color: $gray-line, $amount: 80);
         }
       }
+
+      @media screen and (max-width: 989px) {
+        min-width: 32px;
+      }
     }
   }
 
@@ -339,6 +381,10 @@ body {
           b {
             color: $orange;
           }
+        }
+
+        @media screen and (max-width: 908px) {
+          font-size: 18px;
         }
       }
     }
