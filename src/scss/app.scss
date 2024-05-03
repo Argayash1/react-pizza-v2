@@ -120,6 +120,16 @@ body {
     .content__title {
       margin: 0;
     }
+
+    @media screen and (max-width: 908px) {
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+
+    @media screen and (max-width: 539px) {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -544,6 +554,47 @@ body {
         width: 270px;
         height: 229.5px;
       }
+    }
+  }
+}
+
+.full-pizza {
+  &-image {
+    width: 584px;
+    height: 584px;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+    object-position: 27px top;
+
+    @media screen and (max-width: 748px) {
+      width: 80vw;
+      height: auto;
+      object-position: 10px top;
+    }
+  }
+
+  &-title {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &-price {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.015em;
+    line-height: 27px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &-link {
+    @media screen and (max-width: 645px) {
+      display: flex;
+      justify-content: center;
     }
   }
 }
