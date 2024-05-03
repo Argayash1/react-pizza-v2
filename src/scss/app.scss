@@ -128,6 +128,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 539px) {
+      flex-direction: column;
+      gap: 15px;
+    }
   }
 
   .content__title {
@@ -208,6 +213,11 @@ body {
       @media screen and (max-width: 645px) {
         margin-right: 10px;
       }
+
+      @media screen and (max-width: 539px) {
+        margin-right: 0;
+        justify-self: center;
+      }
     }
 
     &-info {
@@ -243,6 +253,10 @@ body {
 
       @media screen and (max-width: 645px) {
         margin-right: 10px;
+      }
+
+      @media screen and (max-width: 539px) {
+        grid-column: 2/4;
       }
     }
 
@@ -295,6 +309,10 @@ body {
       @media screen and (max-width: 805px) {
         min-width: 94.14px;
       }
+
+      @media screen and (max-width: 539px) {
+        width: 94.14px;
+      }
     }
 
     &-price {
@@ -314,19 +332,23 @@ body {
       }
 
       @media screen and (max-width: 1011px) {
-        max-width: 162.22px;
+        width: auto;
         margin-left: auto;
-        justify-content: start;
+        margin-right: auto;
       }
 
-      @media screen and (max-width: 846px) {
-        margin-left: 15px;
-      }
-
-      @media screen and (max-width: 645px) {
-        max-width: fit-content;
-        margin-right: 10px;
+      @media screen and (max-width: 757px) {
         margin-left: 10px;
+        margin-right: 10px;
+        min-width: fit-content;
+      }
+
+      @media screen and (max-width: 539px) {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: none;
+        justify-self: center;
+        width: auto;
       }
     }
 
@@ -365,6 +387,12 @@ body {
         min-width: 32px;
       }
     }
+
+    @media screen and (max-width: 539px) {
+      display: grid;
+      grid-template-columns: 94.13px auto 32px;
+      column-gap: 10px;
+    }
   }
 
   &__bottom {
@@ -386,6 +414,12 @@ body {
         @media screen and (max-width: 908px) {
           font-size: 18px;
         }
+      }
+
+      @media screen and (max-width: 539px) {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
       }
     }
 
@@ -431,6 +465,12 @@ body {
         font-weight: 600;
         width: 210px;
         padding: 16px;
+      }
+
+      @media screen and (max-width: 539px) {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
       }
     }
   }
