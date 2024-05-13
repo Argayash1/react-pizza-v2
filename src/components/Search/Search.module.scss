@@ -1,11 +1,26 @@
 .root {
   position: relative;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: content-box;
+  width: 400px;
+  min-width: 300px;
+
+  @media screen and (max-width: 841px) {
+    max-width: 300px;
+    min-width: 270px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+  }
 }
 
 .input {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 12px 42px;
-  width: 400px;
+  width: 100%;
   border-radius: 10px;
   font-size: 16px;
 
@@ -13,13 +28,9 @@
     border: 1px solid rgba(0, 0, 0, 0.2);
   }
 
-  @media screen and (max-width: 1078px) {
-    max-width: 300px;
-  }
-
-  @media screen and (max-width: 346px) {
-    max-width: 270px;
-  }
+  // @media screen and (max-width: 346px) {
+  //   max-width: 270px;
+  // }
 }
 
 .icon {
@@ -27,8 +38,12 @@
   height: 22px;
   opacity: 0.3;
   position: absolute;
-  left: 14px;
+  left: 29px;
   top: 12px;
+
+  @media screen and (max-width: 841px) {
+    left: 14px;
+  }
 }
 
 .clearIcon {
