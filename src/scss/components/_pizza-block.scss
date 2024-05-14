@@ -12,6 +12,11 @@
 
   &__image {
     width: 260px;
+
+    @media screen and (max-width: 730px) {
+      object-fit: contain;
+      object-position: 6.5px center;
+    }
   }
 
   &__title {
